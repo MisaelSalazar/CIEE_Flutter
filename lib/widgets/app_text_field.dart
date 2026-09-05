@@ -46,9 +46,9 @@ class _AppTextFieldState extends State<AppTextField> {
           Text(
             widget.label!,
             style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                  color: colors.onSurfaceVariant,
-                  fontWeight: FontWeight.w500,
-                ),
+              color: colors.onSurfaceVariant,
+              fontWeight: FontWeight.w500,
+            ),
           ),
           const SizedBox(height: 8),
         ],

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../start_screen/start_screen.dart';
 import '../../widgets/aside_menu.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -86,10 +87,12 @@ class _HomeScreenState extends State<HomeScreen> {
                   children: [
                     _buildHeader(option),
                     Expanded(
-                      child: Padding(
-                        padding: const EdgeInsets.all(24),
-                        child: _buildPlaceholder(colors, option),
-                      ),
+                      child: _selectedIndex == 0
+                          ? const StartScreen()
+                          : Padding(
+                              padding: const EdgeInsets.all(24),
+                              child: _buildPlaceholder(colors, option),
+                            ),
                     ),
                   ],
                 ),
@@ -114,10 +117,8 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       child: Text(
         option.label,
-        style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-              fontWeight: FontWeight.w600,
-              color: colors.onSurface,
-            ),
+        style: Theme.of(context).textTheme.headlineSmall
+            ?.copyWith(fontWeight: FontWeight.w600, color: colors.onSurface),
       ),
     );
   }
@@ -155,17 +156,16 @@ class _HomeScreenState extends State<HomeScreen> {
                   option.label,
                   textAlign: TextAlign.center,
                   style: Theme.of(context).textTheme.headlineSmall?.copyWith(
-                        fontWeight: FontWeight.w600,
-                        color: colors.onSurface,
-                      ),
+                    fontWeight: FontWeight.w600,
+                    color: colors.onSurface,
+                  ),
                 ),
                 const SizedBox(height: 8),
                 Text(
                   'Pantalla en construcción',
                   textAlign: TextAlign.center,
-                  style: Theme.of(context).textTheme.bodyMedium?.copyWith(
-                        color: colors.onSurfaceVariant,
-                      ),
+                  style: Theme.of(context).textTheme.bodyMedium
+                      ?.copyWith(color: colors.onSurfaceVariant),
                 ),
               ],
             ),
