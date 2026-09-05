@@ -26,11 +26,7 @@ class BrandHeader extends StatelessWidget {
             color: colors.primaryContainer,
             shape: BoxShape.circle,
           ),
-          child: Icon(
-            icon,
-            size: 48,
-            color: colors.onPrimaryContainer,
-          ),
+          child: Icon(icon, size: 48, color: colors.onPrimaryContainer),
         ),
         const SizedBox(height: 16),
         Text(
@@ -46,7 +42,9 @@ class BrandHeader extends StatelessWidget {
           Text(
             subtitle!,
             textAlign: TextAlign.center,
-            style: textTheme.bodyMedium?.copyWith(color: colors.onSurfaceVariant),
+            style: textTheme.bodyMedium?.copyWith(
+              color: colors.onSurfaceVariant,
+            ),
           ),
         ],
       ],

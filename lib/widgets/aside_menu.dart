@@ -43,9 +43,7 @@ class AsideMenu extends StatelessWidget {
         color: colors.onSurface,
         fontWeight: FontWeight.w600,
       ),
-      unselectedLabelTextStyle: TextStyle(
-        color: colors.onSurfaceVariant,
-      ),
+      unselectedLabelTextStyle: TextStyle(color: colors.onSurfaceVariant),
       leading: Padding(
         padding: const EdgeInsets.symmetric(vertical: 16),
         child: Center(
@@ -57,10 +55,7 @@ class AsideMenu extends StatelessWidget {
               color: colors.primaryContainer,
               shape: BoxShape.circle,
             ),
-            child: Icon(
-              Icons.school,
-              color: colors.onPrimaryContainer,
-            ),
+            child: Icon(Icons.school, color: colors.onPrimaryContainer),
           ),
         ),
       ),

@@ -25,10 +25,7 @@ class FormCard extends StatelessWidget {
           borderRadius: BorderRadius.circular(20),
           side: BorderSide(color: colors.outlineVariant),
         ),
-        child: Padding(
-          padding: padding,
-          child: child,
-        ),
+        child: Padding(padding: padding, child: child),
       ),
     );
   }
