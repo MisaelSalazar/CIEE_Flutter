@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../start_screen/start_screen.dart';
+import '../incidents_screen/incidents_screen.dart';
 import '../../widgets/aside_menu.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -89,10 +90,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     Expanded(
                       child: _selectedIndex == 0
                           ? const StartScreen()
-                          : Padding(
-                              padding: const EdgeInsets.all(24),
-                              child: _buildPlaceholder(colors, option),
-                            ),
+                          : _selectedIndex == 1
+                              ? const IncidentsScreen()
+                              : Padding(
+                                  padding: const EdgeInsets.all(24),
+                                  child: _buildPlaceholder(colors, option),
+                                ),
                     ),
                   ],
                 ),
