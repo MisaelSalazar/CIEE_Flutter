@@ -19,9 +19,6 @@ class TiposIncidencias extends StatelessWidget {
               label: const Text('Nuevo Tipo'),
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
               ),
             ),
           ),

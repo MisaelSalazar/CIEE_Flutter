@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../theme/app_theme.dart';
 import '../../../widgets/app_table.dart';
 
 class GestionIncidencias extends StatelessWidget {
@@ -19,9 +20,6 @@ class GestionIncidencias extends StatelessWidget {
               label: const Text('Agregar Incidencia'),
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
               ),
             ),
           ),
@@ -264,13 +262,13 @@ class GestionIncidencias extends StatelessWidget {
     TextTheme textTheme,
     bool abierto,
   ) {
-    final color = abierto ? Colors.green.shade700 : colors.outline;
+    final color = abierto ? AppColors.success : AppColors.secondary;
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.12),
-        borderRadius: BorderRadius.circular(999),
+        borderRadius: BorderRadius.circular(AppRadius.md),
       ),
       child: Text(
         abierto ? 'Abierto' : 'Cerrado',

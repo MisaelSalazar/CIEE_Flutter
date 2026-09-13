@@ -1,6 +1,8 @@
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
+import '../theme/app_theme.dart';
+
 class AppTable extends StatefulWidget {
   final List<String> columns;
   final List<List<Widget>> rows;
@@ -10,7 +12,7 @@ class AppTable extends StatefulWidget {
     super.key,
     required this.columns,
     required this.rows,
-    this.rowsPerPage = 8,
+    this.rowsPerPage = 5,
   });
 
   @override
@@ -52,7 +54,7 @@ class _AppTableState extends State<AppTable> {
       color: colors.surface,
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(AppRadius.md),
         side: BorderSide(color: colors.outlineVariant),
       ),
       child: Column(
@@ -109,7 +111,7 @@ class _AppTableState extends State<AppTable> {
       ),
       children: [
         TableRow(
-          decoration: BoxDecoration(color: colors.secondaryContainer),
+          decoration: const BoxDecoration(color: AppColors.primary),
           children: [
             for (final column in widget.columns) _buildHeaderCell(context, column),
           ],
@@ -146,7 +148,7 @@ class _AppTableState extends State<AppTable> {
         column,
         style: Theme.of(context).textTheme.titleSmall?.copyWith(
           fontWeight: FontWeight.w600,
-          color: colors.onSecondaryContainer,
+          color: colors.onPrimary,
         ),
       ),
     );
@@ -249,7 +251,7 @@ class _PageNumberButton extends StatelessWidget {
         alignment: Alignment.center,
         decoration: BoxDecoration(
           color: isActive ? colors.primary : Colors.transparent,
-          borderRadius: BorderRadius.circular(4),
+          borderRadius: BorderRadius.circular(AppRadius.md),
         ),
         child: Text(
           '$page',

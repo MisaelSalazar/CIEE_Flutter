@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/app_theme.dart';
+
 class SectionCard extends StatelessWidget {
   final String title;
   final IconData? icon;
@@ -26,7 +28,7 @@ class SectionCard extends StatelessWidget {
       color: colors.surface,
       clipBehavior: Clip.antiAlias,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(AppRadius.md),
         side: BorderSide(color: colors.outlineVariant),
       ),
       child: Column(
@@ -42,13 +44,13 @@ class SectionCard extends StatelessWidget {
                     height: 36,
                     alignment: Alignment.center,
                     decoration: BoxDecoration(
-                      color: colors.secondaryContainer,
-                      borderRadius: BorderRadius.circular(10),
+                      color: colors.primaryContainer,
+                      borderRadius: BorderRadius.circular(AppRadius.md),
                     ),
                     child: Icon(
                       icon,
                       size: 20,
-                      color: colors.onSecondaryContainer,
+                      color: colors.onPrimaryContainer,
                     ),
                   ),
                   const SizedBox(width: 12),

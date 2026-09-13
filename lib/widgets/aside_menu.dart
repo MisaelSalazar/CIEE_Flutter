@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/app_theme.dart';
+
 class MenuOption {
   final String label;
   final IconData icon;
@@ -35,15 +37,21 @@ class AsideMenu extends StatelessWidget {
       scrollable: true,
       selectedIndex: selectedIndex,
       onDestinationSelected: onSelect,
-      backgroundColor: colors.surface,
-      indicatorColor: colors.secondaryContainer,
-      selectedIconTheme: IconThemeData(color: colors.onSecondaryContainer),
-      unselectedIconTheme: IconThemeData(color: colors.onSurfaceVariant),
+      backgroundColor: AppColors.sidebarBackground,
+      indicatorColor: colors.primary,
+      selectedIconTheme: IconThemeData(
+        color: AppColors.sidebarOnBackground,
+      ),
+      unselectedIconTheme: IconThemeData(
+        color: AppColors.sidebarOnBackgroundVariant,
+      ),
       selectedLabelTextStyle: TextStyle(
-        color: colors.onSurface,
+        color: AppColors.sidebarSelectedLabel,
         fontWeight: FontWeight.w600,
       ),
-      unselectedLabelTextStyle: TextStyle(color: colors.onSurfaceVariant),
+      unselectedLabelTextStyle: TextStyle(
+        color: AppColors.sidebarOnBackgroundVariant,
+      ),
       leading: Padding(
         padding: const EdgeInsets.symmetric(vertical: 16),
         child: Center(
@@ -52,10 +60,10 @@ class AsideMenu extends StatelessWidget {
             height: 44,
             alignment: Alignment.center,
             decoration: BoxDecoration(
-              color: colors.primaryContainer,
-              shape: BoxShape.circle,
+              color: colors.primary,
+              borderRadius: BorderRadius.circular(AppRadius.md),
             ),
-            child: Icon(Icons.school, color: colors.onPrimaryContainer),
+            child: Icon(Icons.school, color: AppColors.sidebarOnBackground),
           ),
         ),
       ),

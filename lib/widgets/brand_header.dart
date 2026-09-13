@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/app_theme.dart';
+
 class BrandHeader extends StatelessWidget {
   final IconData icon;
   final String title;
@@ -24,7 +26,7 @@ class BrandHeader extends StatelessWidget {
           padding: const EdgeInsets.all(20),
           decoration: BoxDecoration(
             color: colors.primaryContainer,
-            shape: BoxShape.circle,
+            borderRadius: BorderRadius.circular(AppRadius.md),
           ),
           child: Icon(icon, size: 48, color: colors.onPrimaryContainer),
         ),

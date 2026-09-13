@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/app_theme.dart';
+
 class StatCard extends StatelessWidget {
   final IconData icon;
   final String label;
@@ -23,7 +25,7 @@ class StatCard extends StatelessWidget {
       elevation: 0,
       color: colors.surface,
       shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.circular(20),
+        borderRadius: BorderRadius.circular(AppRadius.md),
         side: BorderSide(color: colors.outlineVariant),
       ),
       child: Padding(
@@ -36,7 +38,7 @@ class StatCard extends StatelessWidget {
               alignment: Alignment.center,
               decoration: BoxDecoration(
                 color: color.withValues(alpha: 0.12),
-                borderRadius: BorderRadius.circular(14),
+                borderRadius: BorderRadius.circular(AppRadius.md),
               ),
               child: Icon(icon, size: 26, color: color),
             ),
