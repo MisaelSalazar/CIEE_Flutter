@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../../theme/app_theme.dart';
 import '../../../widgets/app_table.dart';
 
 class SeguimientoIncidencias extends StatelessWidget {
@@ -19,9 +20,6 @@ class SeguimientoIncidencias extends StatelessWidget {
               label: const Text('Nuevo Seguimiento'),
               style: FilledButton.styleFrom(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(12),
-                ),
               ),
             ),
           ),
@@ -180,13 +178,13 @@ class SeguimientoIncidencias extends StatelessWidget {
     TextTheme textTheme,
     bool abierta,
   ) {
-    final color = abierta ? Colors.green.shade700 : colors.outline;
+    final color = abierta ? AppColors.success : AppColors.secondary;
 
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
       decoration: BoxDecoration(
         color: color.withValues(alpha: 0.12),
-        borderRadius: BorderRadius.circular(999),
+        borderRadius: BorderRadius.circular(AppRadius.md),
       ),
       child: Text(
         abierta ? 'Abierta' : 'Cerrada',

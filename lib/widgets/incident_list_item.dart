@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/app_theme.dart';
+
 class IncidentListItem extends StatelessWidget {
   final String title;
   final String subtitle;
@@ -30,7 +32,7 @@ class IncidentListItem extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             color: severityColor.withValues(alpha: 0.12),
-            shape: BoxShape.circle,
+            borderRadius: BorderRadius.circular(AppRadius.md),
           ),
           child: Icon(
             Icons.warning_amber_rounded,
@@ -77,7 +79,7 @@ class IncidentListItem extends StatelessWidget {
               padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
               decoration: BoxDecoration(
                 color: severityColor.withValues(alpha: 0.12),
-                borderRadius: BorderRadius.circular(999),
+                borderRadius: BorderRadius.circular(AppRadius.md),
               ),
               child: Text(
                 severityLabel,

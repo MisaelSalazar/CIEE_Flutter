@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../theme/app_theme.dart';
 import '../../widgets/event_list_item.dart';
 import '../../widgets/incident_list_item.dart';
 import '../../widgets/section_card.dart';
@@ -145,7 +146,7 @@ class StartScreen extends StatelessWidget {
             subtitle: '3° de primaria, grupo B. Reincidencia semanal.',
             date: 'Ayer, 14:10',
             severityLabel: 'Media',
-            severityColor: Colors.orange.shade800,
+            severityColor: AppColors.orange,
           ),
           _buildItemDivider(colors),
           IncidentListItem(
@@ -153,7 +154,7 @@ class StartScreen extends StatelessWidget {
             subtitle: 'Cámara detectó ingreso sin credencial.',
             date: 'Mar 02, 11:05',
             severityLabel: 'Baja',
-            severityColor: Colors.green.shade700,
+            severityColor: AppColors.success,
           ),
         ],
       ),

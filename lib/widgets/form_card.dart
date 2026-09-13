@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/app_theme.dart';
+
 class FormCard extends StatelessWidget {
   final Widget child;
   final EdgeInsetsGeometry padding;
@@ -22,7 +24,7 @@ class FormCard extends StatelessWidget {
         elevation: 0,
         color: colors.surface,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(20),
+          borderRadius: BorderRadius.circular(AppRadius.md),
           side: BorderSide(color: colors.outlineVariant),
         ),
         child: Padding(padding: padding, child: child),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../theme/app_theme.dart';
+
 class EventListItem extends StatelessWidget {
   final String day;
   final String month;
@@ -27,7 +29,7 @@ class EventListItem extends StatelessWidget {
           alignment: Alignment.center,
           decoration: BoxDecoration(
             color: colors.primaryContainer,
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(AppRadius.md),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,

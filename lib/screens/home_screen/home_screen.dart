@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../../theme/app_theme.dart';
 import '../start_screen/start_screen.dart';
 import '../incidents_screen/incidents_screen.dart';
 import '../../widgets/aside_menu.dart';
@@ -134,7 +135,7 @@ class _HomeScreenState extends State<HomeScreen> {
           elevation: 0,
           color: colors.surface,
           shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.circular(20),
+            borderRadius: BorderRadius.circular(AppRadius.md),
             side: BorderSide(color: colors.outlineVariant),
           ),
           child: Padding(
@@ -146,7 +147,7 @@ class _HomeScreenState extends State<HomeScreen> {
                   padding: const EdgeInsets.all(20),
                   decoration: BoxDecoration(
                     color: colors.primaryContainer,
-                    shape: BoxShape.circle,
+                    borderRadius: BorderRadius.circular(AppRadius.md),
                   ),
                   child: Icon(
                     option.icon,
